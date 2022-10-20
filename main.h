@@ -16,10 +16,13 @@
 typedef struct print
 {
 	char *code;
-	int (*f)(va_list, char *, unsigned int);
+	int (*f)(va_list ap, char *buf, unsigned int ibuf);
 } print_t;
 
+int _printf(const char *format, ...);
 int _putchar(char c);
-int _print(const char *format, ...);
+int _putbuf(const char *buf, unsigned int nbuf);
+int write_to_buf(char *buf, char c, unsigned int ibuf);
+int (*get_func(const char *, unsigned int))(va_list, char *, unsigned int);
 
 #endif /* MAIN_H */
