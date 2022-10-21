@@ -19,6 +19,10 @@ typedef struct print
 	int (*f)(va_list ap, char *buf, unsigned int ibuf);
 } print_t;
 
+int print_chr(va_list ap, char *buf, unsigned int ibuf);
+int print_str(va_list ap, char *buf, unsigned int ibuf);
+int print_mod(va_list ap, char *buf, unsigned int ibuf);
+
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _putbuf(const char *buf, unsigned int nbuf);
