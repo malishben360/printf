@@ -10,6 +10,9 @@
 int (*get_func(const char *s, unsigned int is))(va_list, char *, unsigned int)
 {
 	print_t functions[] = {
+		{"c", &print_chr},
+		{"s", &print_str},
+		{"%", &print_mod},
 		{NULL, NULL}
 		 };
 	int i = 0;
