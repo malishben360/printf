@@ -23,11 +23,13 @@ int print_chr(va_list ap, char *buf, unsigned int ibuf);
 int print_str(va_list ap, char *buf, unsigned int ibuf);
 int print_mod(va_list ap, char *buf, unsigned int ibuf);
 int print_int(va_list arguments, char *buf, unsigned int ibuf);
+int print_bnr(va_list arguments, char *buf, unsigned int ibuf);
 
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _putbuf(const char *buf, unsigned int nbuf);
 int write_to_buf(char *buf, char c, unsigned int ibuf);
 int (*get_func(const char *, unsigned int))(va_list, char *, unsigned int);
+char *write_bnr_array(char *binary, long int int_in, int isneg, int limit);
 
 #endif /* MAIN_H */
