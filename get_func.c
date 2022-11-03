@@ -13,6 +13,8 @@ int (*get_func(const char *s, unsigned int is))(va_list, char *, unsigned int)
 		{"c", &print_chr},
 		{"s", &print_str},
 		{"%", &print_mod},
+		{"d", &print_int},
+		{"i", &print_int},
 		{NULL, NULL}
 		 };
 	int i = 0;
