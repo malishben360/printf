@@ -1,13 +1,12 @@
 #include "main.h"
-
 /**
-  * print_upx - prints a decimal in hexadecimal
-  * @ap: the character to print
-  * @buf: buffer pointer
-  * @ibuf: index for buffer pointer
-  * Return: number of characters printed.
-  */
-int print_upx(va_list ap, char *buf, unsigned int ibuf)
+ * print_hex - prints a decimal in hexadecimal
+ * @arguments: input string
+ * @buf: buffer pointer
+ * @ibuf: index for buffer pointer
+ * Return: number of chars printed
+ */
+int print_hex(va_list ap, char *buf, unsigned int ibuf)
 {
 	int int_input, i, isnegative, count, first_digit;
 	char *hexadecimal, *binary;
@@ -27,7 +26,7 @@ int print_upx(va_list ap, char *buf, unsigned int ibuf)
 	binary = malloc(sizeof(char) * (32 + 1));
 	binary = write_bnr_array(binary, int_input, isnegative, 32);
 	hexadecimal = malloc(sizeof(char) * (8 + 1));
-	hexadecimal = write_hex_array(binary, hexadecimal, 1, 8);
+	hexadecimal = write_hex_array(binary, hexadecimal, 0, 8);
 	for (first_digit = i = count = 0; hexadecimal[i]; i++)
 	{
 		if (hexadecimal[i] != '0' && first_digit == 0)

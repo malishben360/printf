@@ -24,6 +24,7 @@ int print_str(va_list ap, char *buf, unsigned int ibuf);
 int print_mod(va_list ap, char *buf, unsigned int ibuf);
 int print_unt(va_list ap, char *buf, unsigned int ibuf);
 int print_hex(va_list ap, char *buf, unsigned int ibuf);
+int print_oct(va_list ap, char *buf, unsigned int ibuf);
 int print_upx(va_list ap, char *buf, unsigned int ibuf);
 int print_int(va_list ap, char *buf, unsigned int ibuf);
 int print_bnr(va_list ap, char *buf, unsigned int ibuf);
@@ -33,6 +34,8 @@ int _putchar(char c);
 int _putbuf(const char *buf, unsigned int nbuf);
 int write_to_buf(char *buf, char c, unsigned int ibuf);
 int (*get_func(const char *, unsigned int))(va_list, char *, unsigned int);
-char *write_bnr_array(char *binary, long int int_in, int isneg, int limit);
+char *write_bnr_array(char *bnr, long int int_in, int isneg, int limit);
+char *write_hex_array(char *bnr, char *hex, int isupp, int limit);
+char *write_oct_array(char *bnr, char *oct);
 
 #endif /* MAIN_H */
