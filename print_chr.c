@@ -13,6 +13,6 @@ int print_chr(va_list ap, char *buf, unsigned int ibuf)
 	char c;
 
 	c = va_arg(ap, int);
-	buf[ibuf] = c;
+	write_to_buf(buf, c, ibuf);
 	return (1);
 }

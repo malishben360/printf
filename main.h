@@ -22,6 +22,9 @@ typedef struct print
 int print_chr(va_list ap, char *buf, unsigned int ibuf);
 int print_str(va_list ap, char *buf, unsigned int ibuf);
 int print_mod(va_list ap, char *buf, unsigned int ibuf);
+int print_unt(va_list ap, char *buf, unsigned int ibuf);
+int print_hex(va_list ap, char *buf, unsigned int ibuf);
+int print_upx(va_list ap, char *buf, unsigned int ibuf);
 
 int _printf(const char *format, ...);
 int _putchar(char c);
